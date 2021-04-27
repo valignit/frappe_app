@@ -5,10 +5,17 @@ from frappe import _
 def get_data():
 	return [
 		{
-			"module_name": "Custext",
+			"module_name": "custext",
 			"color": "grey",
 			"icon": "octicon octicon-file-directory",
 			"type": "module",
-			"label": _("Custext")
+			"label": _("custext")
+		},
+		{
+			"module_name": "Alignpos",
+			"color": "grey",
+			"icon": "octicon octicon-file-directory",
+			"type": "module",
+			"label": _("Alignpos")
 		}
 	]

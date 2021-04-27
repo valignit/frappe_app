@@ -1,20 +1,30 @@
 {
- "creation": "2021-04-26 19:36:11.763233",
+ "creation": "2021-04-27 18:57:57.868878",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "item_sync_date_time"
+  "item_sync_date_time",
+  "customer_sync_date_time"
  ],
  "fields": [
   {
+   "bold": 1,
    "fieldname": "item_sync_date_time",
    "fieldtype": "Datetime",
-   "label": "Item Sync Date Time"
+   "label": "Item Sync Date Time",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_sync_date_time",
+   "fieldtype": "Datetime",
+   "label": "Customer Sync Date Time",
+   "read_only": 1
   }
  ],
  "issingle": 1,
- "modified": "2021-04-27 05:05:41.790257",
+ "modified": "2021-05-02 18:54:31.053576",
  "modified_by": "Administrator",
  "module": "Alignpos",
  "name": "Alignpos Settings",
