@@ -1,3 +1,12 @@
+##################################################
+# Application: alignPOS
+# Installation: AFSM
+# Hook Program: common_functions
+# Description: Commonly used functions across the module
+# Version: 1.0
+# 1.0.0 - 04-05-2021: New program
+##################################################
+
 from __future__ import unicode_literals
 import frappe
 import json
