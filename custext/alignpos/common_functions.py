@@ -20,7 +20,6 @@ from frappe.model.mapper import get_mapped_doc
 
 @frappe.whitelist()
 def update_loyalty_points(doc, target_doc=None):
-    frappe.msgprint(doc.name)
 
     doc_customer = frappe.get_doc("Customer", doc.customer)
 
@@ -33,9 +32,7 @@ def update_loyalty_points(doc, target_doc=None):
     total_loyalty_points = 0
     for point in points_list:
         total_loyalty_points = total_loyalty_points + int(point['loyalty_points'])
-    frappe.msgprint(str(total_loyalty_points))
     doc_customer.loyalty_points = total_loyalty_points
     doc_customer.customer_sync_date_time = frappe.utils.get_datetime()
     doc_customer.save()
-    frappe.msgprint("update loyalty_points end")
 

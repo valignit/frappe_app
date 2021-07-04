@@ -12,6 +12,12 @@ def get_data():
 					"name": "Alignpos Settings",
 					"description": _("Database of potential customers."),
 					"onboard": 1,
+				},
+				{
+					"type": "doctype",
+					"name": "Alignpos Invoice",
+					"description": _("Database of potential customers."),
+					"onboard": 1,
 				}
 			]
 		}

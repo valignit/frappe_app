@@ -1,0 +1,152 @@
+{
+ "autoname": "field:invoice_number",
+ "creation": "2021-06-01 07:08:53.065426",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_number",
+  "posting_date",
+  "customer",
+  "items",
+  "total_amount",
+  "discount_amount",
+  "cgst_tax_amount",
+  "sgst_tax_amount",
+  "invoice_amount",
+  "credit_note_amount",
+  "credit_note_reference",
+  "loyalty_points_redeemed",
+  "loyalty_redeemed_amount",
+  "payment",
+  "paid_amount",
+  "home_delivery",
+  "terminal_id",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Float",
+   "label": "Total Amount"
+  },
+  {
+   "fieldname": "discount_amount",
+   "fieldtype": "Float",
+   "label": "Discount Amount"
+  },
+  {
+   "fieldname": "cgst_tax_amount",
+   "fieldtype": "Float",
+   "label": "CGST Tax Amount"
+  },
+  {
+   "fieldname": "sgst_tax_amount",
+   "fieldtype": "Float",
+   "label": "SGST Tax Amount"
+  },
+  {
+   "fieldname": "invoice_amount",
+   "fieldtype": "Float",
+   "label": "Invoice Amount"
+  },
+  {
+   "fieldname": "credit_note_amount",
+   "fieldtype": "Float",
+   "label": "Credit Note Amount"
+  },
+  {
+   "fieldname": "credit_note_reference",
+   "fieldtype": "Data",
+   "label": "Credit Note Reference"
+  },
+  {
+   "fieldname": "loyalty_points_redeemed",
+   "fieldtype": "Int",
+   "label": "Loyalty Points Redeemed"
+  },
+  {
+   "fieldname": "loyalty_redeemed_amount",
+   "fieldtype": "Float",
+   "label": "Loyalty Redeemed Amount"
+  },
+  {
+   "fieldname": "paid_amount",
+   "fieldtype": "Float",
+   "label": "Paid Amount"
+  },
+  {
+   "fieldname": "home_delivery",
+   "fieldtype": "Select",
+   "label": "Home delivery",
+   "options": "Yes\nNo"
+  },
+  {
+   "fieldname": "terminal_id",
+   "fieldtype": "Data",
+   "label": "Terminal Id"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Alignpos Invoice Item"
+  },
+  {
+   "fieldname": "payment",
+   "fieldtype": "Table",
+   "label": "Payment",
+   "options": "Alignpos Invoice Payment"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Alignpos Invoice",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2021-06-10 19:22:10.299385",
+ "modified_by": "Administrator",
+ "module": "Alignpos",
+ "name": "Alignpos Invoice",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
