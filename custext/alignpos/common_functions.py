@@ -36,3 +36,38 @@ def update_loyalty_points(doc, target_doc=None):
     doc_customer.customer_sync_date_time = frappe.utils.get_datetime()
     doc_customer.save()
 
+
+@frappe.whitelist()
+def create_exchange_adjustment(docname):
+
+    doc_sales_invoice = frappe.get_doc('Sales Invoice', docname)
+
+    #msgstr = 'whitelist:'
+    msgstr = 'whitelist:' + str(doc_sales_invoice.grand_total)
+    frappe.msgprint(msgstr)
+
+    doc_payment_entry = frappe.get_doc({
+        'doctype' : "Payment Entry",
+        'company' : doc_sales_invoice.company,
+        'payment_type' : "Pay",
+        'posting_date' : frappe.utils.nowdate(),
+        'party_type' : "Customer",
+        'party' : doc_sales_invoice.customer, 
+        'mode_of_payment' : "Exchange Adjustment",
+        'paid_from' : "Exchange Adjustment - AFSM",
+        'paid_to' : "Debtors - AFSM",
+        'paid_amount' : doc_sales_invoice.rounded_total,
+        'received_amount' : doc_sales_invoice.rounded_total
+    })
+    allocated_amount = doc_sales_invoice.grand_total  -1
+    #allocated_amount = doc_sales_invoice.grand_total * -1
+    frappe.msgprint(str(allocated_amount))
+    doc_payment_entry.append("references", {
+        'reference_doctype': "Sales Invoice",
+        'reference_name': doc_sales_invoice.return_against,
+        'allocated_amount': allocated_amount 
+    })
+    frappe.msgprint('here2')
+    doc_payment_entry.insert()
+    frappe.msgprint('here3')
+

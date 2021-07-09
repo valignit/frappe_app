@@ -79,12 +79,10 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-        "Sales Invoice": {
-                "on_submit": "custext.alignpos.common_functions.update_loyalty_points",
-                "on_cancel": "custext.alignpos.common_functions.update_loyalty_points"
-        } 
-}
+#doc_events = {
+#        "Sales Invoice": {
+#        } 
+#}
 
 # Scheduled Tasks
 # ---------------
