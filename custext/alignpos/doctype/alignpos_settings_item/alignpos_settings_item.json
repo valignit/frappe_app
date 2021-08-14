@@ -1,0 +1,30 @@
+{
+ "autoname": "field:favorite_item",
+ "creation": "2021-08-10 18:48:21.784221",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "favorite_item"
+ ],
+ "fields": [
+  {
+   "fieldname": "favorite_item",
+   "fieldtype": "Link",
+   "label": "Favorite Item",
+   "options": "Item",
+   "unique": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-08-10 18:54:25.836042",
+ "modified_by": "Administrator",
+ "module": "Alignpos",
+ "name": "Alignpos Settings Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

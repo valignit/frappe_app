@@ -9,6 +9,12 @@ def get_data():
 			"items": [
 				{
 					"type": "doctype",
+					"name": "Alignpos Settings",
+					"description": _("Database of potential customers."),
+					"onboard": 1,
+				},
+				{
+					"type": "doctype",
 					"name": "Alignpos Invoice",
 					"description": _("Database of potential customers."),
 					"onboard": 1,

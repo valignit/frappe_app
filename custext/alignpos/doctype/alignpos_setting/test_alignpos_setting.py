@@ -6,5 +6,5 @@ from __future__ import unicode_literals
 # import frappe
 import unittest
 
-class TestAlignposSettings(unittest.TestCase):
+class TestAlignposSetting(unittest.TestCase):
 	pass
